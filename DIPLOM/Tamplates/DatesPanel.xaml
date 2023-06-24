@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DIPLOM.Tamplates.DatesPanel"
+             >
+             
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Frame Margin="0,0,0,0" Padding="0" BorderColor="White" Grid.Row="0">
+
+            <CollectionView ItemsSource="{Binding NameDays}">
+                <CollectionView.ItemsLayout >
+                    <LinearItemsLayout Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame  BackgroundColor="{Binding .}" Padding="0" BorderColor="White">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="53" />
+                                </Grid.ColumnDefinitions>
+                                <Label  Margin="5" Padding="0"  Text="{Binding .}" Grid.Row="0" HorizontalTextAlignment="Center" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
+
+
+
+        <Frame Grid.Row="1" Padding="0" BorderColor="White" Margin="0,0,0,0">
+            <CollectionView ItemsSource="{Binding Dates}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0"  BorderColor="White" >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="53" />
+                                </Grid.ColumnDefinitions>
+                                <Button Margin="2" BackgroundColor="#5072FF" Grid.Row="1" Text="{Binding .}" Command="{Binding ChangeColorCommand}" BorderColor="White"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
+
+    </Grid>
+
+</ContentView>

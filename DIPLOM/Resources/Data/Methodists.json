@@ -1,0 +1,29 @@
+{
+  "Keys": {
+    "MainKeys": "методист,метоист,методиста",
+    "SubKeys": {
+      "NumberKeys": "номер, номр",
+      "OfficeKeys": "кабинет, кабнт, кобинет, кобинт",
+      "EmailKeys": "почта, почту",
+      "NameKeys": "имя, зовут"
+    }
+  },
+
+  "Methodists": {
+    "Methodist1": {
+      "Number": "Номер вашего методиста: +7 123 456 789",
+      "Office": "204 кабинет",
+      "Name": "Ведерникова Дарья Сергеевна",
+      "Groups": "мкнб 19 1, ибб 21 1",
+      "Email": "VedernikovaDS@mail.ru"
+    },
+    "Methodist2": {
+      "Number": "Номер вашего методиста: +7 123 456 789",
+      "Office": "202 кабинет",
+      "Name": "ТЕСТ",
+      "Groups": "и 1 1",
+      "Email": "TEST@mail.ru"
+    }
+  }
+}
+ 

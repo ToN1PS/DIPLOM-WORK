@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DIPLOM.View.SettingsPageView"
+             Title="Настройки" Shell.TabBarIsVisible="False">
+
+    <Grid>
+        
+        <VerticalStackLayout Margin="10,10,0,0">
+            <Button Text="Учебное завдение" TextColor="Black" BackgroundColor="White" BorderColor="White" HorizontalOptions="Start" FontSize="16"  Clicked="OnClickinstitution"/>
+            <Button Clicked="UpdateButton" Text="Обновление компонентов" TextColor="Black" BackgroundColor="White" BorderColor="White" HorizontalOptions="Start" FontSize="16"/>
+        </VerticalStackLayout>
+
+        <Frame IsVisible="false" x:Name="UpdateFrame" Margin="10,0,10,90" HorizontalOptions="Center" VerticalOptions="EndAndExpand" BackgroundColor="#5072FF">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+                
+                <Label  Grid.Column="0" FontSize="16" TextColor="White" Text="Приложение в обновлении не нуждается" />
+                <Button Clicked="UpdateClose" Grid.Column="1" Grid.Row="1" Text="Закрыть" VerticalOptions="End"/>
+            </Grid>
+        </Frame>
+        
+    </Grid>
+</ContentPage >

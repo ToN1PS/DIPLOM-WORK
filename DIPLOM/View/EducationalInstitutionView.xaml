@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DIPLOM.View.EducationalInstitutionView"
+             Title="Учебное заведение"  Shell.TabBarIsVisible="False"
+             xmlns:ViewModel="clr-namespace:DIPLOM.ViewModel">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame IsVisible="false">
+                    <Picker x:Name="FormStudy"
+                        Title="Форма обучения"
+                        HorizontalTextAlignment="Center"
+                        FontSize="18"
+                        
+                        ItemsSource="{Binding FormStudies}"
+                        SelectedItem="{Binding SelectedFormStudies}" IsEnabled="True"/>
+                </Frame>
+                <Button Clicked="FormStudyClicked" Padding="8" HorizontalOptions="Start" Text="Форма обучения" Grid.Row="0" Grid.Column="0" FontSize="16" BackgroundColor="White" TextColor="Black"/>
+
+                <Frame IsVisible="false">
+                    <Picker x:Name="University"
+                    Title="Университет"
+                    HorizontalTextAlignment="Center"
+                    FontSize="18"
+                    
+                    ItemsSource="{Binding Universities}"
+                    SelectedItem="{Binding SelectedUniversity}"/>
+                </Frame>
+                <Button  Clicked="UniversityClicked" Padding="8" HorizontalOptions="Start" Text="Университет" Grid.Row="1" Grid.Column="0" FontSize="16" BackgroundColor="White" TextColor="Black"/>
+
+                <Frame IsVisible="false">
+                    <Picker x:Name="GroupName"
+                    Title="Название группы"
+                    HorizontalTextAlignment="Center"
+                    FontSize="18"
+                    ItemsSource="{Binding Groups}"
+                    SelectedItem="{Binding SelectedGroup}"/>
+                </Frame>
+                <Button Clicked="GroupNameClicked" Padding="8" HorizontalOptions="Start" Text="Группа" Grid.Row="2" Grid.Column="0" FontSize="16" BackgroundColor="White" TextColor="Black"/>
+
+                
+                <Button Clicked="FIOClicked" Padding="8" HorizontalOptions="Start" Text="ФИО" Grid.Row="3" Grid.Column="0" FontSize="16" BackgroundColor="White" TextColor="Black"/>
+
+                <Label Padding="8" Text="{Binding FormStudies}" Grid.Row="0" Grid.Column="1" FontSize="16" BackgroundColor="White" TextColor="#5C5252"/>
+                <Label Padding="8" Text="{Binding SelectedUniversity}" Grid.Row="1" Grid.Column="1" FontSize="16" BackgroundColor="White" TextColor="#5C5252"/>
+                <Label Padding="8" Text="{Binding Group}" Grid.Row="2" Grid.Column="1" FontSize="16" BackgroundColor="White" TextColor="#5C5252"/>
+                <Label Padding="8" Text="{Binding Fio}" Grid.Row="3" Grid.Column="1" FontSize="16" BackgroundColor="White" TextColor="#5C5252"/>
+            </Grid>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="1" Grid.Row="1" Text="Для изменения информации нажмите на интересующий вас пункт" HorizontalOptions="Center" FontSize="16" TextColor="#5C5252" />
+        </Grid>
+
+        <Frame x:Name="framew" Margin="10,0,10,0" CornerRadius="20"  IsVisible="false" BackgroundColor="#5072FF" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                        
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="80" />
+                        
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="FIO" Grid.Column="0" Placeholder="ФИО"
+                        HorizontalTextAlignment="Center"  FontSize="18" TextColor="White"  PlaceholderColor="White" />
+
+                <Button Clicked="FIOWriht" Grid.Column="1" Text="Изменить"/>
+
+
+            </Grid>
+        </Frame>
+            
+        
+    </VerticalStackLayout>
+</ContentPage>

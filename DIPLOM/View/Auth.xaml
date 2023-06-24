@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:DIPLOM.Tamplates"
+             x:Class="DIPLOM.View.Auth"
+             xmlns:ViewModel="clr-namespace:DIPLOM.ViewModel"
+             >
+
+
+    
+    <ContentPage.Content >
+        <Grid BackgroundColor="#5072FF" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+
+            <Frame Grid.Row="0" Grid.Column="0"
+                    CornerRadius="30" Padding="10" Margin="30,30,30,0" BackgroundColor="#5072FF" BorderColor="#5072FF">
+                <Label Text="Вход на платформу" HorizontalTextAlignment="Center" TextColor="White" FontSize="29"/>
+            </Frame>
+
+
+            <Frame Grid.Row="1" Grid.Column="0" CornerRadius="30" Padding="10" Margin="30,30,30,0">
+                <Picker x:Name="FormStudy"
+                    Title="Форма обучения"
+                    HorizontalTextAlignment="Center"
+                    FontSize="18"
+                    ItemsSource="{Binding FormStudies}"
+                    SelectedItem="{Binding SelectedFormStudy}"/>
+            </Frame>
+            
+            <Frame Grid.Row="2" Grid.Column="0" CornerRadius="30" Padding="10" Margin="30,30,30,0">
+                <Picker x:Name="University"
+                    Title="Университет"
+                    HorizontalTextAlignment="Center"
+                    FontSize="18"
+                    ItemsSource="{Binding Universities}"
+                    SelectedItem="{Binding SelectedUniversity}"/>
+            </Frame>
+
+            <Frame Grid.Row="3" Grid.Column="0" CornerRadius="30" Padding="10" Margin="30,30,30,0">
+                <Picker x:Name="GroupName"
+                    Title="Название группы"
+                    HorizontalTextAlignment="Center"
+                    FontSize="18"
+                    ItemsSource="{Binding Groups}"
+                    SelectedItem="{Binding SelectedGroup}"/>
+            </Frame>
+
+
+            <Frame  Grid.Row="4" Grid.Column="0"
+                    CornerRadius="30" Padding="10" Margin="30,30,30,0">
+                <Entry Placeholder="ФИО" TextColor="black"
+                    HorizontalTextAlignment="Center" PlaceholderColor="Gray"  FontSize="18" Text="{Binding FIO}">
+                </Entry>
+            </Frame>
+            
+
+            <Frame Grid.Row="5" Grid.Column="0"
+                    CornerRadius="30" Padding="10" Margin="30,30,30,0">
+                <Button Text="Войти" FontSize="18"  BackgroundColor="White" TextColor="Black" Command="{Binding SaveCommand}">
+                </Button>
+            </Frame>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

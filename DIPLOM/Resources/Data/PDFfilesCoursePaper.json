@@ -1,0 +1,33 @@
+{
+  "Keys": {
+    "MainKeys": "методичка,методичку",
+    "SubKeys": {
+      "CodeKeys": "код",
+      "TeacherKeys": "имя, препод, ведёт, зовут"
+    }
+
+  },
+  "MoreInfo": "Введите номер интересующих вас файлов",
+  "Files": {
+    "File1": {
+      "Code": "1",
+      "Discipline": "Алгоритмизация и программиравание",
+      "Teacher": "Сорокин Г.Г.",
+      "Groups": "мкнб 19 1",
+      "Semestr": "2",
+      "PdfpathMY": "D:/MAUI/ConsoleApp1/ConsoleApp1/Files/Course paper/mknb 19 1/МУ_Алгоритмизация и программирование.pdf",
+      "PdfpathRP": "D:/MAUI/ConsoleApp1/ConsoleApp1/Files/Course paper/mknb 19 1/22.РП_Алгоритмизация и программиравание.pdf"
+    },
+    "File2": {
+      "Code": "2",
+      "Discipline": "Анализ данных и машинное обучение",
+      "Teacher": "Аханова М. А.",
+      "Groups": "мкнб 19 1",
+      "Semestr": "7",
+      "PdfpathMY": "D:/MAUI/ConsoleApp1/ConsoleApp1/Files/Course paper/mknb 19 1/МУ_Анализ данных и машинное обучение.pdf",
+      "PdfpathRP": "D:/MAUI/ConsoleApp1/ConsoleApp1/Files/Course paper/mknb 19 1/32.РП_Анализ данных и машинное обучение.pdf"
+    }
+
+  }
+}
+

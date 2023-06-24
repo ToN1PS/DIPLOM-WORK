@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:ViewModels="clr-namespace:DIPLOM.ViewModel"
+          x:Class="DIPLOM.View.MainPage"
+          xmlns:Tamplate="clr-namespace:DIPLOM.Tamplates">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Настройки" Priority="0" Clicked="OnSettingsClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Margin="10,20,10,0">
+                <Frame Padding="0" BorderColor="White">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="300" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="53" />
+                            <ColumnDefinition Width="53" />
+                            <ColumnDefinition Width="53" />
+                            <ColumnDefinition Width="53" />
+                            <ColumnDefinition Width="53" />
+                            <ColumnDefinition Width="53" />
+                            <ColumnDefinition Width="53" />
+                        </Grid.ColumnDefinitions>
+                        <Label Margin="5" Padding="0"   BindingContext="{ViewModels:DatePanelViewModel}" BackgroundColor="{Binding Color[0]}" Text="{Binding NameDays[0]}" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" />
+                        <Label Margin="5" Padding="0"  BindingContext="{ViewModels:DatePanelViewModel}" BackgroundColor="{Binding Color[1]}" Text="{Binding NameDays[1]}" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+                        <Label Margin="5" Padding="0"  BindingContext="{ViewModels:DatePanelViewModel}" Text="{Binding NameDays[2]}" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" />
+                        <Label Margin="5" Padding="0"  BindingContext="{ViewModels:DatePanelViewModel}" Text="{Binding NameDays[3]}" Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center" />
+                        <Label Margin="5" Padding="0"  BindingContext="{ViewModels:DatePanelViewModel}" Text="{Binding NameDays[4]}" Grid.Row="0" Grid.Column="4" HorizontalTextAlignment="Center" />
+                        <Label Margin="5" Padding="0"  BindingContext="{ViewModels:DatePanelViewModel}" Text="{Binding NameDays[5]}" Grid.Row="0" Grid.Column="5" HorizontalTextAlignment="Center" />
+                        <Label Margin="5" Padding="0"  BindingContext="{ViewModels:DatePanelViewModel}" Text="{Binding NameDays[6]}" Grid.Row="0" Grid.Column="6" HorizontalTextAlignment="Center" />
+
+                        <Button Grid.Column="0" x:Name="Button1" Grid.Row="1" Margin="2" BackgroundColor="#5072FF" Text="пн" Clicked="OnButtonClicked" CommandParameter="Понедельник" BorderColor="White"/>
+                        <Button Grid.Column="1" x:Name="Button2" Grid.Row="1" Margin="2" BackgroundColor="#5072FF" Text="вт" Clicked="OnButtonClicked" CommandParameter="Вторник" BorderColor="White"/>
+                        <Button Grid.Column="2" x:Name="Button3" Grid.Row="1" Margin="2" BackgroundColor="#5072FF" Text="ср" Clicked="OnButtonClicked" CommandParameter="Среда" BorderColor="White"/>
+                        <Button Grid.Column="3" x:Name="Button4" Grid.Row="1" Margin="2" BackgroundColor="#5072FF" Text="чт" Clicked="OnButtonClicked" CommandParameter="Четверг" BorderColor="White"/>
+                        <Button Grid.Column="4" x:Name="Button5" Grid.Row="1" Margin="2" BackgroundColor="#5072FF" Text="пт" Clicked="OnButtonClicked" CommandParameter="Пятница" BorderColor="White"/>
+                        <Button Grid.Column="5" x:Name="Button6" Grid.Row="1" Margin="2" BackgroundColor="#5072FF" Text="сб" Clicked="OnButtonClicked" CommandParameter="Суббота" BorderColor="White"/>
+                        <Button Grid.Column="6" x:Name="Button7" Grid.Row="1" Margin="2" BackgroundColor="#5072FF" Text="вс" Clicked="OnButtonClicked" CommandParameter="Воскресенье" BorderColor="White"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+            <ScrollView Grid.Row="1" Grid.Column="0" Padding="0" Margin="0,0,10,0"  >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame  Grid.Row="0" Margin="10,0,0,0" Padding="0" BackgroundColor="#F5E4E4" BorderColor="Transparent">
+                                <Grid>
+                                    <Label x:Name="TypeOfWeekLabel" TextColor="Black" Text="{Binding TypeOfWeek}" Margin="10,10,10,10" Padding="0" />
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </Grid>
+                    <Grid Padding="0" Grid.Row="1" Margin="0,0,0,0" x:Name="contentGrid">
+                        <Tamplate:ScheduleTemplate x:Name="ScheduleTemplate" BindingContext="{ViewModels:ScheduleViewModel}" />
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

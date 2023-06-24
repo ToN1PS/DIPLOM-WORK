@@ -1,0 +1,60 @@
+{
+  "Keys": {
+    "MainKeys": "препод,преподаватель,учитель,учителя,преподавателя",
+    "SubKeys": {
+      "DepartamentNamekeys": "кафедра, номр",
+      "AddressKeys": "адрес",
+      "OfficeKeys": "кабинет, кабнт, кобинет, кобинт",
+      "EmailKeys": "почта, почту",
+      "NameKeys": "имя, зовут",
+      "Schedule": "расписание"
+    }
+  },
+  "Departaments": {
+    "Departament1": {
+      "Code": "1",
+      "Title": "Бизнес информатики",
+      "Groups": "мкнб 19 1",
+      "Teachers": {
+        "Teacher1": {
+          "Address": "Мельникайте ...",
+          "Cabinet number": "519 (Корпус 7)",
+          "Name": "Аханова М. А.",
+          "Email": "AhanovaMA@mail.ru"
+        },
+        "Teacher2": {
+          "Address": "Мельникайте ...",
+          "Cabinet number": "519",
+          "Name": "Сорокин Г. Г.",
+          "Email": "SorokinGG@mail.ru"
+        },
+        "Teacher3": {
+          "Address": "Мельникайте ...",
+          "Cabinet number": "519",
+          "Name": "Наймушина А. Г.",
+          "Email": "NaymushinaAG@mail.ru"
+        }
+      }
+    },
+    "Departament2": {
+      "Code": "2",
+      "Groups": "None",
+      "Title": "Ин.Яз",
+      "Teachers": {
+        "Teacher1": {
+          "Address": "Мельникайте ...",
+          "CabinetNumber": "999",
+          "Name": "Сорокин Г. Г.",
+          "Email": "abob22a@mail.ru"
+        },
+        "Teacher2": {
+          "Address": "Мельникайте ...",
+          "CabinetNumber": "999",
+          "Name": "Яшкина",
+          "Email": "aboba@mail.ru"
+        }
+      }
+    }
+  }
+}
+ 

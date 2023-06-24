@@ -1,0 +1,32 @@
+{
+  "Keys": {
+    "MainKeys": "практика, рп, практике",
+    "SubKeys": {
+      "CodeKeys": "код",
+      "TeacherKeys": "имя, препод, ведёт, зовут"
+    }
+  },
+  "MoreInfo": "Введите номер интересующих вас файлов",
+  "Files": {
+    "File1": {
+      "Code": "1",
+      "Name": "Производственная практика (Преддипломная)",
+      "Teacher": "Аханова М.А.",
+      "Keys": "преддипломная",
+      "Groups": "мкнб 19 1",
+      "Semestr": "8",
+      "Pdfpath": "D:/MAUI/ConsoleApp1/ConsoleApp1/Files/practice/mknb 19 1/РП_Производственная практика (Преддипломная).pdf"
+    },
+    "File2": {
+      "Code": "2",
+      "Name": "Производственная практика (Технологическая)",
+      "Teacher": "Терехова",
+      "Keys": "технологическая",
+      "Groups": "мкнб 19 1",
+      "Semestr": "6",
+      "Pdfpath": "D:/MAUI/ConsoleApp1/ConsoleApp1/Files/practice/mknb 19 1/РП_Производственная практика (Технологическая).pdf"
+    }
+
+  }
+}
+

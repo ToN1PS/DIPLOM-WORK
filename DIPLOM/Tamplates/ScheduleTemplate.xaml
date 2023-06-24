@@ -1,0 +1,40 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DIPLOM.Tamplates.ScheduleTemplate"
+             Title="ScheduleTemplate"
+             x:Name="Schedule">
+    <ContentPage.Resources>
+        <Color x:Key="PrimaryColor">#5072FF</Color>
+        <Color x:Key="SecondaryColor">#F5E4E4</Color>
+        <Color x:Key="TextColor">#808080</Color>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Schedule}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="10,10,10,10" Padding="10" CornerRadius="4" BackgroundColor="{StaticResource SecondaryColor}" BorderColor="Transparent">
+                        <StackLayout Spacing="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <Label Text="{Binding Number}" Margin="0,0,5,0" Grid.Column="0"  FontSize="17" TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold" />
+                                <Label Text="{Binding Time}" Margin="5,0,0,0" Grid.Column="1" FontSize="15" VerticalOptions="Center" TextColor="{StaticResource TextColor}" />
+                            </Grid>
+
+                            <Label  Text="{Binding Subject}" Margin="0,5,0,5" FontSize="16" TextColor="Black" FontAttributes="Bold" />
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="{Binding Teacher}" FontSize="15" TextColor="{StaticResource TextColor}" />
+                                <Label Text="{Binding Type}" FontSize="15" TextColor="{StaticResource TextColor}" />
+                            </StackLayout>
+                            <Label Text="{Binding Room}" FontSize="15" TextColor="{StaticResource TextColor}" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
